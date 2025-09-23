@@ -36,28 +36,29 @@ body {
   min-height: 100vh;
 }
 
-.cell {
-  width: 60px;
-  height: 60px;
-  border: 1px solid red;
-  background-color: cyan;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .board {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 2rem;
 }
 
 .row {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.2rem;
+  gap: 2rem;
+}
+
+.cell {
+  width: 14rem;
+  height: 14rem;
+  background-color: var(--semi-dark-navy);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 0 0 #10212a;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
