@@ -30,6 +30,7 @@ const initializeGame = function () {
 
   for (let i = 0; i < allCells.length; i++) {
     allCells[i].innerHTML = "";
+    allCells[i].classList.remove("winning-cell");
   }
 
   indicatorEl.src = "./assets/silver-x.svg";
