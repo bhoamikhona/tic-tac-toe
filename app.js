@@ -1,1 +1,4 @@
-console.log("hello world");
+board = ["", "", "", "", "", "", "", ""];
+currentPlayer = "X";
+gameOver = false;
+winner = null;
