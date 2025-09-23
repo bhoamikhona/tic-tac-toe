@@ -17,6 +17,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
 html {
@@ -114,7 +115,6 @@ body {
   border-radius: 10px;
 
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 
 .btn-replay:hover {
@@ -155,4 +155,8 @@ body {
 
 .cell:hover {
   cursor: pointer;
+}
+
+.winning-cell {
+  border: 2px solid var(--yellow);
 }

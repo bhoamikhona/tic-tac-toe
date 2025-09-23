@@ -47,7 +47,11 @@ const cellClicked = function (index) {
     const result = checkWinner(board);
     if (result.hasWon) {
       gameOver = true;
-      console.log(`Player won: ${result.winner}`);
+
+      for (let i = 0; i < 3; i++) {
+        console.log(allCells[i]);
+        allCells[result.line[i]].classList.add("winning-cell");
+      }
     }
 
     turn = turn === "x" ? "o" : "x";
