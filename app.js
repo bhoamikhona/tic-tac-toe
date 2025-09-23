@@ -8,6 +8,21 @@ const replayBtn = document.querySelector(".btn-replay");
 // Status Variables
 let turn = "x";
 const board = ["", "", "", "", "", "", "", "", ""];
+let gameOver = false;
+
+const WIN_LINES = [
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6],
+];
+
+// Functions
+const renderBoard = function () {};
 
 const initializeGame = function () {
   turn = "x";
@@ -19,8 +34,6 @@ const initializeGame = function () {
 
   indicatorEl.src = "./assets/silver-x.svg";
 };
-
-const renderBoard = function () {};
 
 const cellClicked = function (index) {
   const cellSelected = document.querySelector(`.cell--${index}`);
@@ -34,6 +47,7 @@ const cellClicked = function (index) {
   }
 };
 
+// Event Listeners
 for (let i = 0; i < allCells.length; i++) {
   allCells[i].addEventListener("click", () => cellClicked(i));
 }
