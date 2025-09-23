@@ -2,6 +2,7 @@
 
 // DOM Elements
 const allCells = document.querySelectorAll(".cell");
+const indicatorEl = document.querySelector(".player-icon");
 
 // Status Variables
 let turn = "x";
@@ -20,5 +21,7 @@ const cellClicked = function (index) {
   if (cellSelected.innerHTML === "") {
     cellSelected.innerHTML = `<img src="./assets/icon-${turn}.svg" alt="player symbol" />`;
     turn = turn === "x" ? "o" : "x";
+
+    indicatorEl.src = `./assets/silver-${turn}.svg`;
   }
 };
