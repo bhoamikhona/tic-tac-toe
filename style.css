@@ -36,6 +36,10 @@ body {
   height: 60px;
   border: 1px solid red;
   background-color: cyan;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .board {
