@@ -29,11 +29,101 @@ body {
   font-weight: 400;
 
   background-color: var(--dark-navy);
+  color: var(--silver);
 
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.9rem;
+}
+
+.h-lg {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.h-md {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+.h-sm {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.h-xs {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo-container {
+  height: 3.2rem;
+  width: auto;
+}
+
+.logo {
+  height: 100%;
+  width: 100%;
+}
+
+.status-indicator {
+  background-color: var(--semi-dark-navy);
+  width: 14rem;
+  height: 5.2rem;
+  box-shadow: 0 4px 0 0 #10212a;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.player-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-replay {
+  height: 5.2rem;
+  width: 5.2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--silver);
+  box-shadow: 0 4px 0 0 #6b8997;
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-replay:hover {
+  background-color: var(--silver__hover);
+}
+
+.icon-replay {
+  height: 2rem;
+  width: 2rem;
 }
 
 .board {

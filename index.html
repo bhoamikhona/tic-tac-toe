@@ -10,21 +10,50 @@
   </head>
   <body>
     <article class="container">
+      <header class="header">
+        <div class="logo-container">
+          <img
+            src="./assets/logo.svg"
+            alt="tic tac toe game logo"
+            class="logo"
+          />
+        </div>
+
+        <div class="status-indicator">
+          <div class="player-icon-container">
+            <img
+              src="./assets/silver-x.svg"
+              alt="current player icon"
+              class="player-icon"
+            />
+          </div>
+          <h4 class="h-xs">TURN</h4>
+        </div>
+
+        <button class="btn-replay">
+          <img
+            src="./assets/icon-restart.svg"
+            alt="replay btn icon"
+            class="icon-replay"
+          />
+        </button>
+      </header>
+
       <main id="gameBoard" class="board">
         <div class="row">
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
+          <div class="cell cell--0"></div>
+          <div class="cell cell--1"></div>
+          <div class="cell cell--2"></div>
         </div>
         <div class="row">
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
+          <div class="cell cell--3"></div>
+          <div class="cell cell--4"></div>
+          <div class="cell cell--5"></div>
         </div>
         <div class="row">
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
+          <div class="cell cell--6"></div>
+          <div class="cell cell--7"></div>
+          <div class="cell cell--8"></div>
         </div>
       </main>
     </article>
