@@ -1,4 +1,6 @@
-board = ["", "", "", "", "", "", "", ""];
-currentPlayer = "X";
-gameOver = false;
-winner = null;
+`use strict`;
+
+const board = ["", "", "", "", "", "", "", ""];
+const currentPlayer = "X";
+const gameOver = false;
+const winner = null;
