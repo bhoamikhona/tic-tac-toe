@@ -152,3 +152,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.cell:hover {
+  cursor: pointer;
+}

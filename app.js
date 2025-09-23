@@ -41,10 +41,29 @@ const cellClicked = function (index) {
   if (board[index] === "") {
     board[index] = turn;
     cellSelected.innerHTML = `<img src="./assets/icon-${turn}.svg" alt="player symbol" />`;
+
+    board[index] = turn;
+
+    const result = checkWinner(board);
+    if (result.hasWon) {
+      gameOver = true;
+      console.log(`Player won: ${result.winner}`);
+    }
+
     turn = turn === "x" ? "o" : "x";
 
     indicatorEl.src = `./assets/silver-${turn}.svg`;
   }
+};
+
+const checkWinner = function (board) {
+  for (const line of WIN_LINES) {
+    const [a, b, c] = line;
+    if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+      return { hasWon: true, winner: board[a], line };
+    }
+  }
+  return { hasWon: false, winner: null, line: null };
 };
 
 // Event Listeners
