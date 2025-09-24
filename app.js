@@ -4,6 +4,10 @@
 const allCells = document.querySelectorAll(".cell");
 const indicatorEl = document.querySelector(".player-icon");
 const replayBtn = document.querySelector(".btn-replay");
+const resultIcon = document.querySelector(".result-icon");
+const resultText = document.querySelector(".result-text");
+const resultModal = document.querySelector(".result-modal");
+const overlayEl = document.querySelector(".overlay");
 
 // Status Variables
 let turn = "x";
@@ -53,6 +57,8 @@ const cellClicked = function (index) {
         console.log(allCells[i]);
         allCells[result.line[i]].classList.add("winning-cell");
       }
+
+      showResult(result);
     }
 
     turn = turn === "x" ? "o" : "x";
@@ -70,6 +76,25 @@ const checkWinner = function (board) {
   }
   return { hasWon: false, winner: null, line: null };
 };
+
+function showResult({ winner }) {
+  if (winner === null) {
+    resultIcon.classList.add("hidden");
+    resultText.textContent = "Round Tied";
+  } else {
+    resultIcon.classList.remove("hidden");
+    resultIcon.src = `./assets/icon-${winner}.svg`;
+    resultText.textContent = "WINS";
+  }
+
+  resultModal.classList.remove("hidden");
+  overlayEl.classList.remove("hidden");
+
+  setTimeout(() => {
+    resultModal.classList.add("hidden");
+    overlayEl.classList.add("hidden");
+  }, 2000);
+}
 
 // Event Listeners
 for (let i = 0; i < allCells.length; i++) {
