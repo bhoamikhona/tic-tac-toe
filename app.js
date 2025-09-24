@@ -27,7 +27,7 @@ const WIN_LINES = [
 ];
 
 // Functions
-const isBoardFull = () => board.every((v) => v !== "");
+const isBoardFull = () => board.every((cell) => cell !== "");
 
 const renderBoard = function () {
   for (let i = 0; i < allCells.length; i++) {
