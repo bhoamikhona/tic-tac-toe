@@ -27,6 +27,11 @@ const WIN_LINES = [
 ];
 
 // Functions
+const playSound = function (soundName) {
+  const audio = new Audio(`./assets/${soundName}.mp3`);
+  audio.play();
+};
+
 const isBoardFull = () => board.every((cell) => cell !== "");
 
 const renderBoard = function () {
@@ -102,6 +107,8 @@ function showResult({ winner }) {
 
     indicatorEl.classList.add("hidden");
     indicatorText.textContent = "Round Tied";
+
+    playSound("aww");
   } else {
     resultIcon.classList.remove("hidden");
     resultIcon.src = `./assets/icon-${winner}.svg`;
@@ -110,6 +117,8 @@ function showResult({ winner }) {
     indicatorEl.classList.remove("hidden");
     indicatorEl.src = `./assets/silver-${winner}.svg`;
     indicatorText.textContent = "WINS";
+
+    playSound("tada");
   }
 
   resultModal.classList.remove("hidden");
