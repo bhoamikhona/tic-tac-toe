@@ -155,8 +155,9 @@ body {
   justify-content: center;
 }
 
-.cell:hover {
+.cell:empty:hover {
   cursor: pointer;
+  background-color: #2c4c5c;
 }
 
 .winning-cell {
@@ -181,7 +182,7 @@ body {
   padding: 5rem;
   z-index: 10;
 
-  animation: pop 200ms ease;
+  animation: pop 200ms ease-in-out;
 }
 
 @keyframes pop {
