@@ -26,7 +26,12 @@ const WINNING_LINES = [
 
 // Functions
 const cellClicked = function () {};
-const initializeGame = function () {};
+
+const initializeGame = function () {
+  currentPlayer = "x";
+  gameOver = false;
+  board = ["", "", "x", "", "", "", "", "", ""];
+};
 
 // Event Listeners
 
