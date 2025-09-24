@@ -25,13 +25,43 @@ const WINNING_LINES = [
 ];
 
 // Functions
-const cellClicked = function () {};
 
+/**
+ * Setting up initial values of all the DOM elements and status variables
+ */
 const initializeGame = function () {
   currentPlayer = "x";
   gameOver = false;
   board = ["", "", "x", "", "", "", "", "", ""];
+
+  renderBoard();
+
+  indicatorIcon.classList.remove("hidden");
+  indicatorIcon.src = "./assets/silver-x.svg";
+  indicatorText.textContent = "TURN";
+
+  resultIcon.classList.remove("hidden");
+  resultModal.classList.add("hidden");
+  overlay.classList.add("hidden");
 };
+
+/**
+ * Looping through all the 9 cells of the board
+ * Removing "Winning" styles
+ * Updating each cell's content based on the current status of the board
+ * array
+ */
+const renderBoard = function () {
+  for (let i = 0; i < board.length; i++) {
+    const cell = cells[i];
+    cell.classList.remove("winning-cell");
+    cell.innerHTML = board[i]
+      ? `<img src="./assets/icon-${board[i]}.svg" alt="player symbol" />`
+      : "";
+  }
+};
+
+const cellClicked = function () {};
 
 // Event Listeners
 
